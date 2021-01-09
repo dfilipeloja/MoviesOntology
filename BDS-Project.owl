@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/daniel/ontologies/2020/10/untitled-ontology-22#"
+     xml:base="http://www.semanticweb.org/daniel/ontologies/2020/10/untitled-ontology-22"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#alugadoPor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#alugadoPor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Consumer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#availableIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#availableIn">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Rental"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#filmeAlugado -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#filmeAlugado">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Movie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#hasFormat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#hasFormat">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Available_Format"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#origemEm -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#origemEm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#participa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#participa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_estreia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_estreia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_fim_aluguer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_fim_aluguer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#priceRental -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#priceRental">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Movie"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
+        <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Available_Format -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Available_Format"/>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Blu-Ray -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Blu-Ray">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Available_Format"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Comedy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Comedy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Consumer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Consumer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Crime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Crime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#DVD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#DVD">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Available_Format"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Director">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Drama -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Drama">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Fantasy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Fantasy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Horror -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Horror">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Movie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Movie">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Serie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Person">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Rental -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Rental"/>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Serie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Serie"/>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#WebOnline -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#WebOnline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Available_Format"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2000/10/swap/pim/contact#Person -->
+
+    <owl:Class rdf:about="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Extraction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Extraction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#The_Rain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#The_Rain"/>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#abc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#abc"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
