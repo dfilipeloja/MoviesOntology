@@ -298,6 +298,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#João -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#João">
+        <rdf:type rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Director"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#The_Rain -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#The_Rain"/>
@@ -307,6 +315,14 @@
     <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#abc -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#abc"/>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#daniel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#daniel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Director"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
