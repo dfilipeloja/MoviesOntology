@@ -41,6 +41,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#encenou -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#encenou">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#participa"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#filmeAlugado -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#filmeAlugado">
@@ -69,6 +77,14 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#participa">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#realizou -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#realizou">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#participa"/>
     </owl:ObjectProperty>
     
 
@@ -289,32 +305,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Extraction -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Extraction"/>
-    
-
-
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#João -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#João">
-        <rdf:type rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Director"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#The_Rain -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#The_Rain"/>
-    
-
-
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#abc -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#abc"/>
     
 
 

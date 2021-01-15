@@ -1,6 +1,7 @@
 import pandas
 import requests
 import json
+from aux_functions import *
 
 prefixes = """
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -12,8 +13,6 @@ prefixes = """
 
 data_filename = 'movies.csv'
 endpoint = 'http://localhost:3030/bdsproject/'
-
-rental_prefix = 'mov:rental_'
 
 """
 Title	Director	Cast	Country	Year	Genre
@@ -28,30 +27,32 @@ def insertTriple(triple):
         print(response.reason)
 
 
+
+def ask(triple):
+    response = requests.post(endpoint + 'query', data = { 'query' : prefixes + triple })
+    return response.json()['boolean']
+
+
 def select(triple):
     response = requests.post(endpoint + 'query', data = { 'query' : prefixes + triple })
     print(response.json())
 
 
-def insertMovieTitle(rentalId, name):
-    insertTriple(f'{rentalId} rdf:type mov:Movie')
-    insertTriple(f'{rentalId} foaf:name \'{name}\'')
-
-
-def insertRental(rentalId):
-    insertTriple(f'{rentalId} rdf:type mov:Rental')
+def insertMovieTitle(movieId, name):
+    insertTriple(f'{movieId} rdf:type mov:Movie')
+    insertTriple(f'{movieId} foaf:name \'{name}\'')
 
 
 def insertActors(actors):
     pass
 
 
-def insertDirectors(rental_id, directors):
+def insertDirector(movie_id, director, directorName):
     #se não existe
     #directorId -> mov:director_daniel
-    insertTriple(f'{directors} rdf:type mov:Director')
-    insertTriple(f'{directors} foaf:name {directorName}')
-    insertTriple(f'{directors} mov:realizou {rental_id}')
+    insertTriple(f'{director} rdf:type mov:Director')
+    insertTriple(f'{director} foaf:name \'{directorName}\'')
+    insertTriple(f'{director} mov:realizou {movie_id}')
     
     pass
 
@@ -61,23 +62,35 @@ def insertGenre(genre):
 
 
 def main():
-    select('SELECT ?subject WHERE { ?subject rdf:type mov:Director }')
-    select('SELECT ?subject WHERE { ?subject rdf:type mov:Consumer }')
-    select('ASK { mov:daniel rdf:type mov:Consumer }')
-    select('ASK { mov:daniel rdf:type mov:Director }')
+    # select('SELECT ?subject WHERE { ?subject rdf:type mov:Director }')
+    # select('SELECT ?subject WHERE { ?subject rdf:type mov:Consumer }')
+    # ask('ASK { mov:daniel rdf:type mov:Consumer }')
+    # ask('ASK { mov:daniel rdf:type mov:Director }')
 
+    movie_prefix = 'mov:movie_'
+    director_prefix = 'mov:director_'
 
-    rental_id = rental_prefix
     table = pandas.read_csv(data_filename, sep='\t')
     
     for index, row in table.iterrows():
-        movieTitle = row['Title'].replace(' ', '')
-        rental_id += movieTitle
+        movieTitle = row['Title']
+        movie_id = movie_prefix + movieTitle.replace(' ', '').lower()
 
-        insertRental(rental_id)
-        insertMovieTitle(rental_id, movieTitle)
-        insertDirectors(rental_id, row['Director'])
-        # add more relations
-        # break
+        insertMovieTitle(movie_id, movieTitle)
+
+        directors = get_people_split(row['Director'])
+        directorName = row['Director']
+
+        for director in directors:
+            directorId = remove_characters_except_number_letter(director).lower()
+            directorId = director_prefix + directorId
+
+            directorExists = ask(f'ASK {{ {directorId} rdf:type mov:Director }}')
+
+            if not directorExists:
+                insertDirector(movie_id, directorId, directorName)
+
+        break
+    
 
 main()
