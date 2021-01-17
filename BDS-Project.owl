@@ -33,18 +33,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#availableIn -->
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#atuouEm -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#availableIn">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Rental"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#atuouEm">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#participa"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#encenou -->
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#availableIn -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#encenou">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#participa"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#availableIn">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Rental"/>
     </owl:ObjectProperty>
     
 
@@ -85,6 +85,14 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#realizou">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#participa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#temGeneroDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#temGeneroDe">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Movie"/>
     </owl:ObjectProperty>
     
 

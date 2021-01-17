@@ -1,3 +1,4 @@
 Fuseki/
 *.pyc
 *.txt
+__pycache__
