@@ -2,3 +2,4 @@ Fuseki/
 *.pyc
 *.txt
 __pycache__
+*.backup.owl
