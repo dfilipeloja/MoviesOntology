@@ -116,10 +116,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_fim_aluguer -->
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_fim -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_fim_aluguer">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Movie"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_fim">
+        <rdfs:comment xml:lang="pt">Data fim do aluguer</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_inicio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_inicio">
+        <rdfs:comment xml:lang="pt">Data de inicio do aluguer</rdfs:comment>
     </owl:DatatypeProperty>
     
 

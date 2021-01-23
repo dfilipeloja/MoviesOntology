@@ -18,3 +18,15 @@ class Sparql:
     def select(self, triple):
         response = requests.post(self.endpoint + 'query', data = { 'query' : self.prefixes + triple })
         return response.json()
+
+    def insertTriple(self, triple):
+        response = requests.post(self.endpoint + 'update', data = { 'update': self.prefixes + ' INSERT DATA{ ' + triple + '}'})
+        if response.status_code == 200:
+            print('[OK_200]: ' + triple)
+        else:
+            print('[FAIL_400]: ' + triple)
+            print(response.reason)
+
+    def ask(self, triple):
+        response = requests.post(self.endpoint + 'query', data = { 'query' : self.prefixes + triple })
+        return response.json()['boolean']
