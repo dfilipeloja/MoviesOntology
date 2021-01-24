@@ -41,30 +41,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#availableIn -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#availableIn">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Rental"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#filmeAlugado -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#filmeAlugado">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Movie"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#hasFormat -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#hasFormat">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Available_Format"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#origemEm -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#origemEm">
@@ -116,30 +92,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_fim -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_fim">
-        <rdfs:comment xml:lang="pt">Data fim do aluguer</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_inicio -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#data_inicio">
-        <rdfs:comment xml:lang="pt">Data de inicio do aluguer</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#priceRental -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#priceRental">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Movie"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://xmlns.com/foaf/0.1/name -->
 
     <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/name">
@@ -175,20 +127,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Available_Format -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Available_Format"/>
-    
-
-
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Blu-Ray -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Blu-Ray">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Available_Format"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Comedy -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Comedy">
@@ -215,14 +153,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Crime">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Genre"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#DVD -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#DVD">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Available_Format"/>
     </owl:Class>
     
 
@@ -267,9 +197,7 @@
 
     <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Movie -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Movie">
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Serie"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Movie"/>
     
 
 
@@ -284,20 +212,6 @@
     <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Rental -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Rental"/>
-    
-
-
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Serie -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Serie"/>
-    
-
-
-    <!-- http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#WebOnline -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#WebOnline">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/moviesAndSeries#Available_Format"/>
-    </owl:Class>
     
 
 
